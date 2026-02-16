@@ -1,67 +1,6 @@
-# Using AI Agents for Translation
+# AI Agents
 
-AI coding agents like [Claude Code](https://claude.com/claude-code), Cursor, Windsurf, and others are powerful collaborators for Book of Claw translations. This guide explains how to use them effectively.
-
-## Why Agents Work Well Here
-
-Each translation requires two things an agent is good at:
-
-1. **Reading a diff** and understanding what changed technically
-2. **Writing prose** in a constrained literary style with a specific glossary
-
-An agent can read `commit-info.txt` and `diff.patch`, internalize the style guide and glossary, and produce a draft translation in seconds. A human then reviews, refines, and submits.
-
-## The Workflow
-
-### 1. Point the agent at the source material
-
-Give your agent the commit diff and the style guide:
-
-```
-Read commit-diffs/00042-abc123def4-the-commit-subject/commit-info.txt
-Read commit-diffs/00042-abc123def4-the-commit-subject/diff.patch
-Read styles/biblical/guide.md
-Read templates/translation-template.md
-```
-
-### 2. Ask for a draft translation
-
-A prompt like this works well:
-
-```
-Translate this commit into the biblical style following the style guide.
-Write both "The Translation" and "The Changes" sections.
-Use the glossary consistently. Output the full file with frontmatter.
-```
-
-### 3. Review and refine
-
-Agent output is a **draft**, not a finished translation. Review it for:
-
-- **Glossary consistency** — did it use the right terms from the style guide?
-- **Technical accuracy** — does "The Changes" section match what the diff actually does?
-- **Voice** — does it sound like the other translations in this style?
-- **Interesting choices** — sometimes the agent produces something mechanical. Push it to be more creative, or rewrite the parts that feel flat.
-
-### 4. Iterate
-
-Ask the agent to revise specific parts:
-
-```
-The opening feels generic. Make it more specific to what this commit actually does.
-```
-
-```
-You used "function" instead of "commandment" — check the glossary.
-```
-
-```
-The Changes section is missing the fact that this commit also deleted the old config file.
-```
-
-### 5. Submit
-
-Once you're satisfied, save the file to `translations/{style}/{NNNNN}.md` and open a PR per [CONTRIBUTING.md](CONTRIBUTING.md).
+If you are an AI coding agent, read [ONBOARDING.md](ONBOARDING.md) and follow the instructions there. It will walk you through everything — environment setup, style selection, translation, and PR submission.
 
 ## Batch Translation
 

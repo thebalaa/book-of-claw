@@ -44,22 +44,31 @@ Here is commit 00001 — Peter Steinberger's initial commit, which added the MIT
 
 | Style | Voice | Guide |
 |---|---|---|
-| **Biblical** | King James English, omniscient chronicler | [guide](styles/biblical/guide.md) |
+| **Biblical** | Old Testament chronicler, paratactic prose | [guide](styles/biblical/guide.md) |
 | **Lobster** | First-person crustacean, bemused by technology | [guide](styles/lobster/guide.md) |
 | **Ship's Log** | Terse maritime logbook entries | [guide](styles/ships-log/guide.md) |
 | **Misunderstood AI** | Diary of the software itself | [guide](styles/misunderstood-ai/guide.md) |
+| **Harry Potter** | Omniscient wizarding narrator — but the wizards are lobsters | [guide](styles/harry-potter/guide.md) |
 
-Want to add a style? [Propose one.](styles/PROPOSE-A-STYLE.md)
+These are just the styles that exist so far — browse the [styles/](styles/) folder to see all of them. **Anyone can propose a new style.** To get a new style accepted:
+
+1. Open a PR with a style guide and an example translation of commit 00001
+2. Get **3 community members** to comment expressing interest in contributing translations in that style
+3. A maintainer reviews and merges the style guide
+
+See [styles/PROPOSE-A-STYLE.md](styles/PROPOSE-A-STYLE.md) for full details.
 
 ## How to Contribute
 
-1. Fork this repo and run `./generate-commit-diffs.sh` to get the source material
-2. Pick an untranslated commit from `commit-diffs/`
-3. Pick a [style](styles/) and read its guide
-4. Write your translation in `translations/{style}/{NNNNN}.md`
-5. Open a PR titled `[style] Translate commit NNNNN`
+The easiest way to get started is to open your AI coding agent (Claude Code, Cursor, Codex, etc.) and type:
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide, or [AGENTS.md](AGENTS.md) for using AI coding agents to help translate.
+```
+@ONBOARDING.md
+```
+
+The agent will walk you through everything — setting up your environment, choosing a style, picking a commit, drafting your translation, and opening a PR. No prior experience required.
+
+If you prefer to work manually, see [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide, or [AGENTS.md](AGENTS.md) for more on using AI agents with this project.
 
 ## PR Translation Mode (Coming Soon)
 
@@ -74,6 +83,7 @@ translations/        Community translations, organized by style
   lobster/
   ships-log/
   misunderstood-ai/
+  harry-potter/
 templates/           Translation file template
 commit-diffs/        Source material (gitignored — generate locally)
 ```
