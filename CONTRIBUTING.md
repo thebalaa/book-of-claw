@@ -89,6 +89,10 @@ A **style steward** is a community member who has contributed 10+ accepted trans
 - Help maintain glossary consistency
 - Mentor new contributors to their style
 
+## Using AI Agents
+
+AI coding agents can draft translations quickly. See [AGENTS.md](AGENTS.md) for a complete guide on using agents effectively — feeding them the right context, reviewing their output, and batch translation.
+
 ## Proposing a New Style
 
 See [styles/PROPOSE-A-STYLE.md](styles/PROPOSE-A-STYLE.md) for full details. In short: open an issue with a name, voice description, glossary (10+ terms), and an example translation. If 3+ people want to write in your style, it gets accepted.

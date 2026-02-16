@@ -59,7 +59,7 @@ Want to add a style? [Propose one.](styles/PROPOSE-A-STYLE.md)
 4. Write your translation in `translations/{style}/{NNNNN}.md`
 5. Open a PR titled `[style] Translate commit NNNNN`
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide, or [AGENTS.md](AGENTS.md) for using AI coding agents to help translate.
 
 ## PR Translation Mode (Coming Soon)
 
