@@ -60,15 +60,15 @@ See [styles/PROPOSE-A-STYLE.md](styles/PROPOSE-A-STYLE.md) for full details.
 
 ## How to Contribute
 
-1. Fork this repo and run `./generate-commit-diffs.sh` to get the source material
-2. Pick an untranslated commit from `commit-diffs/`
-3. Pick a [style](styles/) and read its guide
-4. Write your translation in `translations/{style}/{NNNNN}.md`
-5. Open a PR titled `[style] Translate commit NNNNN`
+The easiest way to get started is to open your AI coding agent (Claude Code, Cursor, Codex, etc.) and type:
 
-**New here?** Run through the [interactive onboarding](ONBOARDING.md) — an AI agent will walk you through your first translation step by step.
+```
+@ONBOARDING.md
+```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide, or [AGENTS.md](AGENTS.md) for using AI coding agents to help translate.
+The agent will walk you through everything — setting up your environment, choosing a style, picking a commit, drafting your translation, and opening a PR. No prior experience required.
+
+If you prefer to work manually, see [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide, or [AGENTS.md](AGENTS.md) for more on using AI agents with this project.
 
 ## PR Translation Mode (Coming Soon)
 
