@@ -1,0 +1,60 @@
+name: New Style Proposal
+description: Propose a new literary style for The Book of Claw
+title: "[Style Proposal] "
+labels: ["style-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a new style! Please fill out all sections below.
+        See [styles/PROPOSE-A-STYLE.md](../../styles/PROPOSE-A-STYLE.md) for full details.
+
+  - type: input
+    id: style-name
+    attributes:
+      label: Style Name
+      description: A short, lowercase, hyphenated name (e.g., "noir-detective", "nature-documentary")
+      placeholder: "my-style-name"
+    validations:
+      required: true
+
+  - type: textarea
+    id: voice-description
+    attributes:
+      label: Voice and Tone
+      description: Who is the narrator? What is the tone? (2-3 sentences)
+      placeholder: "The narrator is a..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: glossary
+    attributes:
+      label: Glossary (minimum 10 terms)
+      description: Map technical terms to your style's vocabulary. Use a markdown table.
+      placeholder: |
+        | Technical Term | Style Term |
+        |---|---|
+        | repository | ... |
+        | commit | ... |
+        | function | ... |
+    validations:
+      required: true
+
+  - type: textarea
+    id: example-translation
+    attributes:
+      label: Example Translation
+      description: Translate commit 00001 (the Initial Commit — added MIT LICENSE file) in your proposed style.
+      placeholder: "Write your example translation here..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Any extra context, vocabulary guidelines, or structural conventions.
+      placeholder: "Optional..."
+    validations:
+      required: false

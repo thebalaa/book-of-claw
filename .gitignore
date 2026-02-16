@@ -1,0 +1,5 @@
+# Raw commit diffs — regenerate locally with ./generate-commit-diffs.sh
+commit-diffs/
+
+# PR diffs (future)
+pr-diffs/
