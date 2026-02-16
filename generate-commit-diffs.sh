@@ -3,32 +3,49 @@ set -euo pipefail
 
 OUTPUT_DIR="commit-diffs"
 REPO_URL="https://github.com/openclaw/openclaw.git"
+EXISTING_CLONE=""
 
 usage() {
-  echo "Usage: $0 [-C output-dir]"
-  echo "  -C DIR  Directory to write commit diffs into (default: commit-diffs)"
+  echo "Usage: $0 [-C output-dir] [-R repo-path]"
+  echo "  -C DIR   Directory to write commit diffs into (default: commit-diffs)"
+  echo "  -R PATH  Path to existing repo clone (if omitted, a temporary clone is made)"
   exit 1
 }
 
-while getopts "C:h" opt; do
+while getopts "C:R:h" opt; do
   case "$opt" in
     C) OUTPUT_DIR="$OPTARG" ;;
+    R) EXISTING_CLONE="$OPTARG" ;;
     h) usage ;;
     *) usage ;;
   esac
 done
+shift $((OPTIND - 1))
 
-# Clone into a temporary directory and work from there
-CLONE_DIR=$(mktemp -d)
-trap 'rm -rf "$CLONE_DIR"' EXIT
-
-echo "Cloning $REPO_URL into temporary directory..."
-git clone --quiet "$REPO_URL" "$CLONE_DIR/repo"
+if [ $# -gt 0 ]; then
+  usage
+fi
 
 mkdir -p "$OUTPUT_DIR"
 OUTPUT_DIR=$(cd "$OUTPUT_DIR" && pwd)
 
-cd "$CLONE_DIR/repo"
+# Use existing clone or create temporary one
+if [ -n "$EXISTING_CLONE" ]; then
+  if [ ! -d "$EXISTING_CLONE/.git" ]; then
+    echo "Error: '$EXISTING_CLONE' does not appear to be a git repository"
+    exit 1
+  fi
+  echo "Using existing clone at $EXISTING_CLONE"
+  cd "$EXISTING_CLONE"
+else
+  # Clone into a temporary directory and work from there
+  CLONE_DIR=$(mktemp -d)
+  trap 'rm -rf "$CLONE_DIR"' EXIT
+
+  echo "Cloning $REPO_URL into temporary directory..."
+  git clone --quiet "$REPO_URL" "$CLONE_DIR/repo"
+  cd "$CLONE_DIR/repo"
+fi
 
 # Get all commits from oldest to newest
 mapfile -t COMMITS < <(git rev-list --reverse HEAD)
