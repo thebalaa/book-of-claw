@@ -12,11 +12,11 @@ Here is commit 00001 — Peter Steinberger's initial commit, which added the MIT
 
 ### Biblical
 
-> In the beginning, there was the Void, and the Void was without form, and darkness was upon the face of the repository.
+> In the beginning there was nothing. And Steinberger looked upon the nothing and he did not turn away.
 >
-> And the Scribe, Steinberger, moved upon the face of the emptiness, and he spake: "Let there be structure." And there was structure, and it was good.
+> And he made a place. And the place was empty. And he set down in that place a single document, and the document was a covenant. And the covenant said: Take this. Use it. Change it. Give it to others. Only preserve these words.
 >
-> And in the first inscription, he laid down the Covenant — the MIT License — which declareth unto all who would come after: "Thou art free."
+> And the name of the covenant was MIT. And the name endured.
 
 ### Lobster
 
