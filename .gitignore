@@ -3,3 +3,5 @@ commit-diffs/
 
 # PR diffs (future)
 pr-diffs/
+
+.stfolder/
