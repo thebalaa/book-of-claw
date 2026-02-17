@@ -2,6 +2,8 @@
 
 ## Quick Start
 
+> **First time?** Try the [interactive onboarding](ONBOARDING.md) — point your AI coding agent at it and it will walk you through every step.
+
 1. **Fork** this repository
 2. **Clone** and run `./generate-commit-diffs.sh` to get the source material
 3. **Pick a commit** — browse `commit-diffs/` or check the coverage matrix (coming soon)
