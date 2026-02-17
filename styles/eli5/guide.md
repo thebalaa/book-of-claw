@@ -1,4 +1,4 @@
-# Baby Language Style Guide
+# ELI5 Style Guide
 
 ## Voice and Tone
 
@@ -20,7 +20,7 @@ A patient explainer who remembers what it's like to be confused by technical stu
 
 ## Glossary
 
-| Technical Term | Baby Language Term |
+| Technical Term | ELI5 Term |
 |---|---|
 | repository | the toy box (where all the pieces live) |
 | commit | a save point (like saving your game) |
@@ -56,4 +56,4 @@ A patient explainer who remembers what it's like to be confused by technical stu
 
 ## Example Translation
 
-See `translations/baby-language/00001.md` for a canonical example.
+See `translations/eli5/00001.md` for a canonical example.

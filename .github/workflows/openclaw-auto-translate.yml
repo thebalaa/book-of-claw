@@ -1,0 +1,96 @@
+name: Auto-translate openclaw PR merges (ELI5)
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check for new merged PRs
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR_JSON=$(gh pr list --repo openclaw/openclaw --state merged --limit 1 \
+            --json number,title,mergedAt,mergeCommit,author)
+
+          PR_SHA=$(echo "$PR_JSON" | jq -r '.[0].mergeCommit.oid')
+          PR_NUM=$(echo "$PR_JSON" | jq -r '.[0].number')
+          PR_TITLE=$(echo "$PR_JSON" | jq -r '.[0].title')
+          PR_AUTHOR=$(echo "$PR_JSON" | jq -r '.[0].author.login')
+          PR_DATE=$(echo "$PR_JSON" | jq -r '.[0].mergedAt' | cut -c1-10)
+
+          # Skip if this commit SHA is already referenced in a translation
+          if grep -rl "\"$PR_SHA\"" translations/eli5/ 2>/dev/null | grep -q .; then
+            echo "has_new=false" >> $GITHUB_OUTPUT
+            echo "Commit $PR_SHA is already translated, skipping."
+            exit 0
+          fi
+
+          echo "has_new=true" >> $GITHUB_OUTPUT
+          echo "pr_num=$PR_NUM" >> $GITHUB_OUTPUT
+          echo "pr_sha=$PR_SHA" >> $GITHUB_OUTPUT
+          echo "pr_title=$PR_TITLE" >> $GITHUB_OUTPUT
+          echo "pr_author=$PR_AUTHOR" >> $GITHUB_OUTPUT
+          echo "pr_date=$PR_DATE" >> $GITHUB_OUTPUT
+
+      - name: Translate with Claude
+        if: steps.check.outputs.has_new == 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: '--max-turns 15'
+          prompt: |
+            A new PR was just merged into openclaw/openclaw:
+            - PR #${{ steps.check.outputs.pr_num }}: "${{ steps.check.outputs.pr_title }}"
+            - Merge commit SHA: ${{ steps.check.outputs.pr_sha }}
+            - Author: ${{ steps.check.outputs.pr_author }}
+            - Date: ${{ steps.check.outputs.pr_date }}
+
+            Translate this into the ELI5 style for this repository (book-of-claw).
+
+            Steps:
+
+            1. Determine the commit number:
+               - Find the highest-numbered directory in commit-diffs/ (e.g. ls commit-diffs/ | sort -V | tail -1)
+                 to get the last known commit number and its SHA (from the directory name).
+               - Use the GitHub compare API to find how many commits ahead the new SHA is:
+                 gh api "repos/openclaw/openclaw/compare/{LAST_SHA}...${{ steps.check.outputs.pr_sha }}" --jq '.ahead_by'
+               - New commit number = last known number + ahead_by
+
+            2. Fetch the PR diff:
+               gh pr diff ${{ steps.check.outputs.pr_num }} --repo openclaw/openclaw
+
+            3. Read the project conventions:
+               - styles/eli5/guide.md
+               - templates/translation-template.md
+               - translations/eli5/12018.md (most recent example)
+
+            4. Write the translation to translations/eli5/{NNNNN}.md
+               (NNNNN zero-padded to 5 digits)
+
+            5. Create a branch, commit, push, and open a PR:
+               git config user.name "github-actions[bot]"
+               git config user.email "github-actions[bot]@users.noreply.github.com"
+               git checkout -b translate/eli5/{NNNNN}
+               git add translations/eli5/{NNNNN}.md
+               git commit -m "[eli5] Translate commit {NNNNN}"
+               git push -u origin translate/eli5/{NNNNN}
+               gh pr create \
+                 --title "[eli5] Translate commit {NNNNN}" \
+                 --body "Auto-translated from openclaw/openclaw#${{ steps.check.outputs.pr_num }}.
+
+               > AI-generated translation via Claude."
