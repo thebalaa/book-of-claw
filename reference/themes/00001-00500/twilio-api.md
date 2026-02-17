@@ -4,27 +4,27 @@ The Twilio integration traces a complete lifecycle from birth to death across 40
 
 ## Commits
 
-| # | Subject | Time |
+| # | Subject | Date |
 |---|---------|------|
-| 00002 | Add warelay CLI with Twilio webhook support | 11:23 |
-| 00015 | Timeout tailscale funnel in verbose runs and surface command output | 12:02 |
-| 00017 | Improve funnel error UX and add -y auto-confirm | 12:30 |
-| 00018 | Add TWILIO_SENDER_SID override and better funnel/setup error messages | 12:36 |
-| 00019 | Fix Twilio sender list call (use params instead of qs) | 12:50 |
-| 00020 | Tighten types for Twilio requests and sender lookup | 12:53 |
-| 00021 | Support TWILIO_SENDER_SID override before sender lookup | 12:56 |
-| 00022 | Use Twilio SDK channelsSenders.list to discover sender | 12:59 |
-| 00028 | Fallback webhook update to incoming phone number when channels sender update fails | 14:20 |
-| 00030 | Normalize webhook path, always log inbound, fix Twilio webhook field names, log polling tip | 15:28 |
-| 00033 | Fix webhook update: send form fields via request; keep SDK/phone fallbacks | 15:37 |
-| 00042 | Experiment with Twilio webhook updates (no functional change yet) | 16:32 |
-| 00043 | Add messaging service webhook fallback; always log inbound | 16:47 |
-| 00044 | Improve Twilio webhook update flow | 16:56 |
-| 00152 | tests: mock twilio auth for update-webhook helpers | 12:21 |
-| 00312 | fix: follow redirects when downloading Twilio media | 14:28 |
-| 00319 | test(media): add redirect coverage and update changelog | 21:09 |
-| 00327 | limits: chunk replies for twilio/web | 23:10 |
-| 00405 | chore: drop twilio and go web-only | 19:03 |
+| 00002 | Add warelay CLI with Twilio webhook support | 2025-11-24 11:23 |
+| 00015 | Timeout tailscale funnel in verbose runs and surface command output | 2025-11-24 12:02 |
+| 00017 | Improve funnel error UX and add -y auto-confirm | 2025-11-24 12:30 |
+| 00018 | Add TWILIO_SENDER_SID override and better funnel/setup error messages | 2025-11-24 12:36 |
+| 00019 | Fix Twilio sender list call (use params instead of qs) | 2025-11-24 12:50 |
+| 00020 | Tighten types for Twilio requests and sender lookup | 2025-11-24 12:53 |
+| 00021 | Support TWILIO_SENDER_SID override before sender lookup | 2025-11-24 12:56 |
+| 00022 | Use Twilio SDK channelsSenders.list to discover sender | 2025-11-24 12:59 |
+| 00028 | Fallback webhook update to incoming phone number when channels sender update fails | 2025-11-24 14:20 |
+| 00030 | Normalize webhook path, always log inbound, fix Twilio webhook field names, log polling tip | 2025-11-24 15:28 |
+| 00033 | Fix webhook update: send form fields via request; keep SDK/phone fallbacks | 2025-11-24 15:37 |
+| 00042 | Experiment with Twilio webhook updates (no functional change yet) | 2025-11-24 16:32 |
+| 00043 | Add messaging service webhook fallback; always log inbound | 2025-11-24 16:47 |
+| 00044 | Improve Twilio webhook update flow | 2025-11-24 16:56 |
+| 00152 | tests: mock twilio auth for update-webhook helpers | 2025-11-25 12:21 |
+| 00312 | fix: follow redirects when downloading Twilio media | 2025-12-02 14:28 |
+| 00319 | test(media): add redirect coverage and update changelog | 2025-12-02 21:09 |
+| 00327 | limits: chunk replies for twilio/web | 2025-12-02 23:10 |
+| 00405 | chore: drop twilio and go web-only | 2025-12-05 19:03 |
 
 ## Narrative Thread
 

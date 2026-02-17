@@ -4,7 +4,7 @@ Seven commits trace the project's identity evolution from initial branding touch
 
 ## Commits
 
-| # | Subject | Time |
+| # | Subject | Date |
 |---|---------|------|
 | 00007 | Add 📡 emoji to README header | 2025-11-24 11:41 |
 | 00029 | Rename setup->up (alias kept) and keep process alive | 2025-11-24 14:43 |

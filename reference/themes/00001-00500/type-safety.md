@@ -4,7 +4,7 @@ The project maintained disciplined attention to TypeScript type safety across 50
 
 ## Commits
 
-| # | Subject | Time |
+| # | Subject | Date |
 |---|---------|------|
 | 00005 | Tighten types: remove anys, validate funnel status, typed exec helpers | 2025-11-24 11:38 |
 | 00020 | Tighten types for Twilio requests and sender lookup | 2025-11-24 12:53 |

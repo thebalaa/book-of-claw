@@ -4,66 +4,66 @@ The auto-reply system evolved from basic config-driven command execution (commit
 
 ## Commits
 
-| # | Subject | Time |
+| # | Subject | Date |
 |---|---------|------|
-| 00034 | Log command execution in config-driven replies | 15:58 |
-| 00035 | Add claude auto-reply allowlist and verbose hooks | 16:00 |
-| 00036 | Document config options and log auto-reply timing | 16:02 |
-| 00037 | Add command timeout and async polling auto-replies | 16:06 |
-| 00038 | Log templated command argv and enforce timeout kill | 16:09 |
-| 00039 | Log stderr and timeout info for auto-reply commands | 16:11 |
-| 00040 | Simplify command log to show resolved argv only | 16:11 |
-| 00041 | Run auto-reply commands via spawn with TTY to avoid hangs | 16:15 |
-| 00053 | Add web provider inbound monitor with auto-replies | 18:33 |
-| 00066 | Add claudeOutputFormat support and provider banners | 01:36 |
-| 00069 | Parse Claude JSON output to return text replies | 01:41 |
-| 00086 | feat: add send --json, logger cleanup, and resilient Claude parsing | 04:08 |
-| 00094 | feat: log auto-reply body and stats for web provider | 04:42 |
-| 00106 | chore: surface media URL in command prompts and tests | 05:20 |
-| 00135 | claude: prefix prompt with Clawd identity | 06:41 |
-| 00137 | claude: tell Clawd to use ~/clawd markdown scratchpad | 06:49 |
-| 00138 | claude: expand Clawd prompt, remind 1500 char limit | 06:50 |
-| 00139 | claude: allow scratchpad markdown or images, remind length | 06:50 |
-| 00184 | Add cwd option for command replies | 16:19 |
-| 00189 | Auto-reply: send timeout fallback and tests | 17:52 |
-| 00196 | feat: optional audio transcription via CLI | 23:06 |
-| 00197 | feat: transcribe audio and surface transcript to prompts | 23:13 |
-| 00199 | feat: support audio/video/doc media caps and transcript context | 23:21 |
-| 00285 | Skip responsePrefix for HEARTBEAT_OK responses | 06:02 |
-| 00289 | Fix empty result JSON dump and missing heartbeat prefix | 04:29 |
-| 00307 | perf(pi): reuse tau rpc for command auto-replies | 20:09 |
-| 00311 | chore: user-agnostic Claude identity and tests | 13:21 |
-| 00313 | fix: send Claude identity prefix on first session message | 14:35 |
-| 00324 | revert: mark system prompt sent on first turn | 21:23 |
-| 00325 | logging: emit agent/session meta at command start | 21:30 |
-| 00326 | auto-reply: support multi-text RPC outputs | 23:03 |
-| 00327 | limits: chunk replies for twilio/web | 23:10 |
-| 00328 | web: handle multi-payload replies | 23:46 |
-| 00329 | Auto-reply: smarter chunking breaks | 00:25 |
-| 00330 | Auto-reply: format and lint fixes | 00:30 |
-| 00331 | CI: fix command-reply payload typing | 00:33 |
-| 00332 | Auto-reply: allow array payloads in signature | 00:35 |
-| 00333 | Heartbeat: normalize array replies | 00:40 |
-| 00334 | Heartbeat: normalize reply arrays for twilio/web | 00:43 |
-| 00338 | Auto-reply: add thinking directives | 08:45 |
-| 00340 | Auto-reply: ack think directives | 08:54 |
-| 00341 | Auto-reply: treat prefixed think directives as directive-only | 08:57 |
-| 00342 | Auto-reply: add /verbose directives and tool result replies | 09:04 |
-| 00343 | Auto-reply: add verbose session hint | 09:07 |
-| 00346 | Auto-reply: show tool results before main reply in verbose mode | 09:14 |
-| 00347 | Auto-reply: stream verbose tool results via tau rpc | 09:21 |
-| 00351 | Verbose: include tool arg metadata in prefixes | 09:57 |
-| 00352 | Verbose: batch rapid tool results | 10:11 |
-| 00353 | Verbose: shorten home paths in tool meta | 10:12 |
-| 00354 | Verbose: slow tool batch window to 1s | 10:13 |
-| 00356 | Verbose: collapse tool meta paths by directory | 10:24 |
-| 00357 | Verbose: shorten meta paths when aggregating | 10:26 |
-| 00378 | auto-reply: surface tool args from rpc start events | 13:31 |
-| 00380 | auto-reply: emoji + result preview for verbose tool calls | 13:34 |
-| 00381 | auto-reply: single emoji per verbose tool line | 13:35 |
-| 00391 | auto-reply: handle group think/verbose directives | 02:29 |
-| 00395 | auto-reply: honor /new after timestamp prefixes | 17:53 |
-| 00422 | fix: suppress heartbeat directive acks and add coverage | 22:54 |
+| 00034 | Log command execution in config-driven replies | 2025-11-24 15:58 |
+| 00035 | Add claude auto-reply allowlist and verbose hooks | 2025-11-24 16:00 |
+| 00036 | Document config options and log auto-reply timing | 2025-11-24 16:02 |
+| 00037 | Add command timeout and async polling auto-replies | 2025-11-24 16:06 |
+| 00038 | Log templated command argv and enforce timeout kill | 2025-11-24 16:09 |
+| 00039 | Log stderr and timeout info for auto-reply commands | 2025-11-24 16:11 |
+| 00040 | Simplify command log to show resolved argv only | 2025-11-24 16:11 |
+| 00041 | Run auto-reply commands via spawn with TTY to avoid hangs | 2025-11-24 16:15 |
+| 00053 | Add web provider inbound monitor with auto-replies | 2025-11-24 18:33 |
+| 00066 | Add claudeOutputFormat support and provider banners | 2025-11-25 01:36 |
+| 00069 | Parse Claude JSON output to return text replies | 2025-11-25 01:41 |
+| 00086 | feat: add send --json, logger cleanup, and resilient Claude parsing | 2025-11-25 04:08 |
+| 00094 | feat: log auto-reply body and stats for web provider | 2025-11-25 04:42 |
+| 00106 | chore: surface media URL in command prompts and tests | 2025-11-25 05:20 |
+| 00135 | claude: prefix prompt with Clawd identity | 2025-11-25 06:41 |
+| 00137 | claude: tell Clawd to use ~/clawd markdown scratchpad | 2025-11-25 06:49 |
+| 00138 | claude: expand Clawd prompt, remind 1500 char limit | 2025-11-25 06:50 |
+| 00139 | claude: allow scratchpad markdown or images, remind length | 2025-11-25 06:50 |
+| 00184 | Add cwd option for command replies | 2025-11-25 16:19 |
+| 00189 | Auto-reply: send timeout fallback and tests | 2025-11-25 17:52 |
+| 00196 | feat: optional audio transcription via CLI | 2025-11-25 23:06 |
+| 00197 | feat: transcribe audio and surface transcript to prompts | 2025-11-25 23:13 |
+| 00199 | feat: support audio/video/doc media caps and transcript context | 2025-11-25 23:21 |
+| 00285 | Skip responsePrefix for HEARTBEAT_OK responses | 2025-11-29 06:02 |
+| 00289 | Fix empty result JSON dump and missing heartbeat prefix | 2025-12-02 04:29 |
+| 00307 | perf(pi): reuse tau rpc for command auto-replies | 2025-12-02 20:09 |
+| 00311 | chore: user-agnostic Claude identity and tests | 2025-12-02 13:21 |
+| 00313 | fix: send Claude identity prefix on first session message | 2025-12-02 14:35 |
+| 00324 | revert: mark system prompt sent on first turn | 2025-12-02 21:23 |
+| 00325 | logging: emit agent/session meta at command start | 2025-12-02 21:30 |
+| 00326 | auto-reply: support multi-text RPC outputs | 2025-12-02 23:03 |
+| 00327 | limits: chunk replies for twilio/web | 2025-12-02 23:10 |
+| 00328 | web: handle multi-payload replies | 2025-12-02 23:46 |
+| 00329 | Auto-reply: smarter chunking breaks | 2025-12-03 00:25 |
+| 00330 | Auto-reply: format and lint fixes | 2025-12-03 00:30 |
+| 00331 | CI: fix command-reply payload typing | 2025-12-03 00:33 |
+| 00332 | Auto-reply: allow array payloads in signature | 2025-12-03 00:35 |
+| 00333 | Heartbeat: normalize array replies | 2025-12-03 00:40 |
+| 00334 | Heartbeat: normalize reply arrays for twilio/web | 2025-12-03 00:43 |
+| 00338 | Auto-reply: add thinking directives | 2025-12-03 08:45 |
+| 00340 | Auto-reply: ack think directives | 2025-12-03 08:54 |
+| 00341 | Auto-reply: treat prefixed think directives as directive-only | 2025-12-03 08:57 |
+| 00342 | Auto-reply: add /verbose directives and tool result replies | 2025-12-03 09:04 |
+| 00343 | Auto-reply: add verbose session hint | 2025-12-03 09:07 |
+| 00346 | Auto-reply: show tool results before main reply in verbose mode | 2025-12-03 09:14 |
+| 00347 | Auto-reply: stream verbose tool results via tau rpc | 2025-12-03 09:21 |
+| 00351 | Verbose: include tool arg metadata in prefixes | 2025-12-03 09:57 |
+| 00352 | Verbose: batch rapid tool results | 2025-12-03 10:11 |
+| 00353 | Verbose: shorten home paths in tool meta | 2025-12-03 10:12 |
+| 00354 | Verbose: slow tool batch window to 1s | 2025-12-03 10:13 |
+| 00356 | Verbose: collapse tool meta paths by directory | 2025-12-03 10:24 |
+| 00357 | Verbose: shorten meta paths when aggregating | 2025-12-03 10:26 |
+| 00378 | auto-reply: surface tool args from rpc start events | 2025-12-03 13:31 |
+| 00380 | auto-reply: emoji + result preview for verbose tool calls | 2025-12-03 13:34 |
+| 00381 | auto-reply: single emoji per verbose tool line | 2025-12-03 13:35 |
+| 00391 | auto-reply: handle group think/verbose directives | 2025-12-04 02:29 |
+| 00395 | auto-reply: honor /new after timestamp prefixes | 2025-12-04 17:53 |
+| 00422 | fix: suppress heartbeat directive acks and add coverage | 2025-12-05 22:54 |
 
 ## Narrative Thread
 

@@ -4,30 +4,30 @@ The project began as a Twilio-only system but evolved to support multiple messag
 
 ## Commits
 
-| # | Subject | Time |
+| # | Subject | Date |
 |---|---------|------|
-| 00045 | Add WhatsApp Web provider option and docs | 17:21 |
-| 00048 | Refactor CLI into modules for web provider and utils | 17:43 |
-| 00053 | Add web provider inbound monitor with auto-replies | 18:33 |
-| 00057 | Fix provider-web mocks and make tests green | 00:16 |
-| 00059 | Fix bailey auth import fallback and assert login alias | 00:22 |
-| 00060 | Pin to @whiskeysockets/baileys 7.0.0-rc.9 and remove auth fallback | 00:28 |
-| 00062 | Switch to Baileys multi-file auth with latest rc | 00:34 |
-| 00063 | Fix web auth detection and auto-restart after 515 | 00:49 |
-| 00068 | Silence Baileys session logs unless verbose | 01:40 |
-| 00079 | test: add infra coverage and fix web logging | 03:50 |
-| 00102 | chore: log web media sends | 05:09 |
-| 00103 | chore: add connection/send logs and web error surfacing | 05:10 |
-| 00109 | fix: accept file/media tokens safely and improve web media send | 05:34 |
-| 00134 | web: send read receipts for inbound messages | 06:36 |
-| 00136 | web: announce available presence when relay starts | 06:42 |
-| 00190 | Web relay: auto-reconnect Baileys and test | 18:09 |
-| 00192 | web: compress auto-reply media | 20:09 |
-| 00327 | limits: chunk replies for twilio/web | 23:10 |
-| 00328 | web: handle multi-payload replies | 23:46 |
-| 00334 | Heartbeat: normalize reply arrays for twilio/web | 00:43 |
-| 00405 | chore: drop twilio and go web-only | 19:03 |
-| 00453 | Discord: CV2! (#16364) | 10:24 |
+| 00045 | Add WhatsApp Web provider option and docs | 2025-11-24 17:21 |
+| 00048 | Refactor CLI into modules for web provider and utils | 2025-11-24 17:43 |
+| 00053 | Add web provider inbound monitor with auto-replies | 2025-11-24 18:33 |
+| 00057 | Fix provider-web mocks and make tests green | 2025-11-25 00:16 |
+| 00059 | Fix bailey auth import fallback and assert login alias | 2025-11-25 00:22 |
+| 00060 | Pin to @whiskeysockets/baileys 7.0.0-rc.9 and remove auth fallback | 2025-11-25 00:28 |
+| 00062 | Switch to Baileys multi-file auth with latest rc | 2025-11-25 00:34 |
+| 00063 | Fix web auth detection and auto-restart after 515 | 2025-11-25 00:49 |
+| 00068 | Silence Baileys session logs unless verbose | 2025-11-25 01:40 |
+| 00079 | test: add infra coverage and fix web logging | 2025-11-25 03:50 |
+| 00102 | chore: log web media sends | 2025-11-25 05:09 |
+| 00103 | chore: add connection/send logs and web error surfacing | 2025-11-25 05:10 |
+| 00109 | fix: accept file/media tokens safely and improve web media send | 2025-11-25 05:34 |
+| 00134 | web: send read receipts for inbound messages | 2025-11-25 06:36 |
+| 00136 | web: announce available presence when relay starts | 2025-11-25 06:42 |
+| 00190 | Web relay: auto-reconnect Baileys and test | 2025-11-25 18:09 |
+| 00192 | web: compress auto-reply media | 2025-11-25 20:09 |
+| 00327 | limits: chunk replies for twilio/web | 2025-12-02 23:10 |
+| 00328 | web: handle multi-payload replies | 2025-12-02 23:46 |
+| 00334 | Heartbeat: normalize reply arrays for twilio/web | 2025-12-03 00:43 |
+| 00405 | chore: drop twilio and go web-only | 2025-12-05 19:03 |
+| 00453 | Discord: CV2! (#16364) | 2026-02-15 10:24 |
 
 ## Narrative Thread
 

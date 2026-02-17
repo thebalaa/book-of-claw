@@ -4,54 +4,54 @@ Addresses how the CLI process stays alive after setup, shuts down gracefully, ma
 
 ## Commits
 
-| # | Subject | Time |
+| # | Subject | Date |
 |---|---------|------|
-| 00024 | Keep setup/webhook running with waitForever and graceful SIGINT | 13:25 |
-| 00026 | Keep process alive reliably with unref interval in waitForever | 13:36 |
-| 00037 | Add command timeout and async polling auto-replies | 16:06 |
-| 00041 | Run auto-reply commands via spawn with TTY to avoid hangs | 16:15 |
-| 00092 | feat: serialize command auto-replies with queue | 04:40 |
-| 00201 | feat: send session prompt once | 23:52 |
-| 00228 | feat: add heartbeat cli and relay trigger | 17:04 |
-| 00230 | fix: heartbeat falls back to last session contact | 17:08 |
-| 00234 | feat: add heartbeat idle override and preserve session freshness | 17:26 |
-| 00240 | Heartbeat: harden targeting and support lid mapping | 18:15 |
-| 00243 | Heartbeat: session-id override and safer fallback | 18:19 |
-| 00246 | Heartbeat: honor session override | 18:32 |
-| 00254 | Fix WebSocket crash + heartbeat default 10min + docs refresh | 18:21 |
-| 00286 | Add auto-recovery from stuck WhatsApp sessions | 17:53 |
-| 00288 | Increase watchdog timeout to 30 minutes | 18:03 |
-| 00293 | Add IPC to prevent Signal session corruption from concurrent connections | 06:31 |
-| 00301 | chore(security): harden ipc socket | 16:09 |
-| 00302 | chore(security): purge session store on logout | 16:33 |
-| 00303 | chore(logs): rotate daily and prune after 24h | 17:11 |
-| 00307 | perf(pi): reuse tau rpc for command auto-replies | 20:09 |
-| 00320 | fix(media): clean up files after response finishes | 21:10 |
-| 00333 | Heartbeat: normalize array replies | 00:40 |
-| 00335 | Heartbeat: guard optional heartbeatCommand | 00:45 |
-| 00347 | Auto-reply: stream verbose tool results via tau rpc | 09:21 |
-| 00349 | Tau RPC: resolve on agent_end | 09:39 |
-| 00361 | Tau RPC: wait for agent_end when tools run | 11:29 |
-| 00362 | Pi: resume Tau sessions with --continue | 11:33 |
-| 00363 | Tau RPC: resolve on agent_end or exit | 11:34 |
-| 00364 | Pi: stream assistant text during RPC runs | 11:50 |
-| 00365 | Pi: stream tool results faster (0.5s, flush after 5) | 12:08 |
-| 00401 | chore: make pi-only rpc with fixed sessions | 17:50 |
-| 00403 | fix: harden pi rpc prompt handling | 18:24 |
-| 00404 | Route pi agent prompts via RPC stdin | 18:34 |
-| 00407 | fix: ignore rpc toolcall deltas to avoid duplicate replies | 19:16 |
-| 00409 | feat: stream turn completions and tighten rpc timeout | 21:13 |
-| 00411 | fix: normalize directive triggers and short-circuit | 21:29 |
-| 00413 | chore: add system marker to directives and abort | 21:37 |
-| 00418 | fix: avoid directive hits inside URLs and add tests | 22:28 |
-| 00419 | test: cover directive parsing and abort/restart prefixes | 22:29 |
-| 00420 | fix: ignore directives inside history blocks | 22:49 |
-| 00423 | fix: broaden prompt-echo guard and add heartbeat directive test | 22:56 |
-| 00424 | fix: allow inline directives to continue and add mixed-message test | 22:57 |
-| 00425 | fix: handle prompt-too-long by resetting session and continuing inline directives | 23:01 |
-| 00426 | revert prompt-too-long fallback and keep inline directives | 23:18 |
-| 00440 | fix: harden directive handling | 23:43 |
-| 00444 | fix: bundle pi dependency and directive handling | 00:49 |
+| 00024 | Keep setup/webhook running with waitForever and graceful SIGINT | 2025-11-24 13:25 |
+| 00026 | Keep process alive reliably with unref interval in waitForever | 2025-11-24 13:36 |
+| 00037 | Add command timeout and async polling auto-replies | 2025-11-24 16:06 |
+| 00041 | Run auto-reply commands via spawn with TTY to avoid hangs | 2025-11-24 16:15 |
+| 00092 | feat: serialize command auto-replies with queue | 2025-11-25 04:40 |
+| 00201 | feat: send session prompt once | 2025-11-25 23:52 |
+| 00228 | feat: add heartbeat cli and relay trigger | 2025-11-26 17:04 |
+| 00230 | fix: heartbeat falls back to last session contact | 2025-11-26 17:08 |
+| 00234 | feat: add heartbeat idle override and preserve session freshness | 2025-11-26 17:26 |
+| 00240 | Heartbeat: harden targeting and support lid mapping | 2025-11-26 18:15 |
+| 00243 | Heartbeat: session-id override and safer fallback | 2025-11-26 18:19 |
+| 00246 | Heartbeat: honor session override | 2025-11-26 18:32 |
+| 00254 | Fix WebSocket crash + heartbeat default 10min + docs refresh | 2025-11-27 18:21 |
+| 00286 | Add auto-recovery from stuck WhatsApp sessions | 2025-11-30 17:53 |
+| 00288 | Increase watchdog timeout to 30 minutes | 2025-11-30 18:03 |
+| 00293 | Add IPC to prevent Signal session corruption from concurrent connections | 2025-12-02 06:31 |
+| 00301 | chore(security): harden ipc socket | 2025-12-02 16:09 |
+| 00302 | chore(security): purge session store on logout | 2025-12-02 16:33 |
+| 00303 | chore(logs): rotate daily and prune after 24h | 2025-12-02 17:11 |
+| 00307 | perf(pi): reuse tau rpc for command auto-replies | 2025-12-02 20:09 |
+| 00320 | fix(media): clean up files after response finishes | 2025-12-02 21:10 |
+| 00333 | Heartbeat: normalize array replies | 2025-12-03 00:40 |
+| 00335 | Heartbeat: guard optional heartbeatCommand | 2025-12-03 00:45 |
+| 00347 | Auto-reply: stream verbose tool results via tau rpc | 2025-12-03 09:21 |
+| 00349 | Tau RPC: resolve on agent_end | 2025-12-03 09:39 |
+| 00361 | Tau RPC: wait for agent_end when tools run | 2025-12-03 11:29 |
+| 00362 | Pi: resume Tau sessions with --continue | 2025-12-03 11:33 |
+| 00363 | Tau RPC: resolve on agent_end or exit | 2025-12-03 11:34 |
+| 00364 | Pi: stream assistant text during RPC runs | 2025-12-03 11:50 |
+| 00365 | Pi: stream tool results faster (0.5s, flush after 5) | 2025-12-03 12:08 |
+| 00401 | chore: make pi-only rpc with fixed sessions | 2025-12-05 17:50 |
+| 00403 | fix: harden pi rpc prompt handling | 2025-12-05 18:24 |
+| 00404 | Route pi agent prompts via RPC stdin | 2025-12-05 18:34 |
+| 00407 | fix: ignore rpc toolcall deltas to avoid duplicate replies | 2025-12-05 19:16 |
+| 00409 | feat: stream turn completions and tighten rpc timeout | 2025-12-05 21:13 |
+| 00411 | fix: normalize directive triggers and short-circuit | 2025-12-05 21:29 |
+| 00413 | chore: add system marker to directives and abort | 2025-12-05 21:37 |
+| 00418 | fix: avoid directive hits inside URLs and add tests | 2025-12-05 22:28 |
+| 00419 | test: cover directive parsing and abort/restart prefixes | 2025-12-05 22:29 |
+| 00420 | fix: ignore directives inside history blocks | 2025-12-05 22:49 |
+| 00423 | fix: broaden prompt-echo guard and add heartbeat directive test | 2025-12-05 22:56 |
+| 00424 | fix: allow inline directives to continue and add mixed-message test | 2025-12-05 22:57 |
+| 00425 | fix: handle prompt-too-long by resetting session and continuing inline directives | 2025-12-05 23:01 |
+| 00426 | revert prompt-too-long fallback and keep inline directives | 2025-12-05 23:18 |
+| 00440 | fix: harden directive handling | 2025-12-05 23:43 |
+| 00444 | fix: bundle pi dependency and directive handling | 2025-12-06 00:49 |
 
 ## Narrative Thread
 
