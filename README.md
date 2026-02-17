@@ -49,6 +49,7 @@ Here is commit 00001 — Peter Steinberger's initial commit, which added the MIT
 | **Ship's Log** | Terse maritime logbook entries | [guide](styles/ships-log/guide.md) |
 | **Misunderstood AI** | Diary of the software itself | [guide](styles/misunderstood-ai/guide.md) |
 | **Harry Potter** | Omniscient wizarding narrator — but the wizards are lobsters | [guide](styles/harry-potter/guide.md) |
+| **Basic English** | Explaining complex technical concepts using only 850 simple words | [guide](styles/basic-english/guide.md) |
 
 These are just the styles that exist so far — browse the [styles/](styles/) folder to see all of them. **Anyone can propose a new style.** To get a new style accepted:
 
